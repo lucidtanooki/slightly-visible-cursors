@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
-# Oreo cursors, based on KDE Breeze
+# Slightly visible cursors, based on Oreo cursors, based on KDE Breeze
 # Copyright (c) 2016 Keefer Rourke <keefer.rourke@gmail.com>
 # Copyright (c) 2020 Sergei Eremenko <https://github.com/SmartFinn>
+# Copyright (c) 2025 Georg Eckert <https://github.com/lucidtanooki>
 
 set -e
 
@@ -99,5 +100,5 @@ for theme_src_dir in "$SRC_DIR"/*; do
 
 	cp -f "$theme_src_dir/index.theme" "$theme_out_dir"/
 	cp -f cursor.theme "$theme_out_dir"/
-	sed -i 's/oreo_base_cursors/'$theme_name'/g' dist/$theme_name/cursor.theme
+	sed -i 's/slightly_visible_base_cursors/'$theme_name'/g' dist/$theme_name/cursor.theme
 done

@@ -19,7 +19,7 @@ abort "Error! Atleast Ruby 2.4 is needed! You are running #{RUBY_VERSION} (#{RUB
 
 ### User definable ###
 ## Location of the base cursors
-BASE = File.join(__dir__, 'oreo_base_cursors')
+BASE = File.join(__dir__, 'slightly_visible_base_cursors')
 
 ## Output directory
 OUT_DIR = File.join(File.expand_path('..', __dir__), 'src')
@@ -28,7 +28,7 @@ OUT_DIR = File.join(File.expand_path('..', __dir__), 'src')
 INDEX_THEME = proc do |x|
 	<<~EOF
 		[Icon Theme]
-		Name=Oreo #{x.split(?_).map(&:capitalize).join(?\s)} Cursors
+		Name=Slightly Visible #{x.split(?_).map(&:capitalize).join(?\s)} Cursors
 		Comment=design by varlesh | colour by #{Process.argv0}
 	EOF
 end
@@ -84,7 +84,7 @@ end
 # Show help
 if ARGV.any? { |x| x[/\A\-(\-help|h)\Z/] }
 	<<~EOF.colourize
-		This program is used to generate oreo cursors.
+		This program is used to generate slightly_visible cursors.
 		It can generate cursor of your defined colours.
 
 		\u2B23 Arguments:
@@ -230,7 +230,7 @@ end
 begin
 	colours.each do |x, y|
 		# Make the directory name is the colour name mentioned in the config file
-		dirname = File.join(OUT_DIR, "oreo_#{x}_cursors")
+		dirname = File.join(OUT_DIR, "slightly_visible_#{x}_cursors")
 
 		# Make the directory mentioned in the config file
 		# We will store svg files here, mapped to colours
